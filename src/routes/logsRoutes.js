@@ -5,8 +5,6 @@ import { createLogSchema } from "../schemas/logSchema.js";
 
 const router = Router();
 
-router.get('/', LogsController.getAllLogs)
-
 router.post('/', validateData(createLogSchema), LogsController.createLog)
 
 export default router;
